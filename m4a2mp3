@@ -1,0 +1,6 @@
+#!/bin/sh
+# DEPRECATED: Keeping just for historical uses.
+for i in *.m4a
+do
+    faad -o - "$i" | lame -h -b 320 - "${i%m4a}mp3"
+done

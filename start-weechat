@@ -1,0 +1,8 @@
+#!/bin/sh
+#screen -D -R irc weechat-curses
+WEECHAT=`which weechat-curses`
+if [[ -S /tmp/tmux-1000/irc ]];
+    then tmux -L irc attach -t irc
+else
+    tmux -L irc new -s irc $WEECHAT
+fi

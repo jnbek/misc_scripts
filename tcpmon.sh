@@ -1,0 +1,3 @@
+#!/bin/sh
+# I can never remember this command...
+tcpdump -n -e -ttt -i pflog0
