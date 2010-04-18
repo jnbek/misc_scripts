@@ -1,1 +1,17 @@
 This is a collection of Mostly Shell and a few Perl scripts I've acquired/written over the years.
+
+backup_db.sh:    A MySQL utility that repairs/optimizes and creates a 30 day archive of backups for all MySQL databases on a given system.
+dos2unix:        A 'should-be' binary safe dos2unix clone written in perl.
+installworld.sh: Part of the old school FreeBSD upgrade process, the install portion.
+m4a2mp3:         Converts AAC files to mp3. For back in the day when few Linux players supported AAC. (Like.. 2002??)
+makeworld.sh:    Part of the old school FreeBSD upgrade process, the build portion. Does Kernel Rebuild and Install as well.
+start-weechat:   A small tmux wrapper to either start a tmux session and start weechat inside, or connect to an existing session.
+tcpmon.sh:       Just a one liner, I can never remember the command syntax to view like connections on pflog0.
+
+========== NOTICE ==========
+
+While I use these scripts or have with success over the years, I will NOT guarentee their safe usage on any other system in any way, for any reason and will not be held responsible for any damages, file loss, corruption or any other side effect irresponsible usagage of these scripts may cause.
+
+========== USE AT YOUR OWN RISK!!!!! ==========
+
+I am releasing these scripts to the public as public domain, unless otherwise noted within the files themselves.
