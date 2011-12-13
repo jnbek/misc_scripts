@@ -42,7 +42,7 @@ for l in `ls $dir`;
 done;
 #Let's Optimize and Repair The DBs first
 echo "Running Optimize and Repair";
-$expath/mysqlcheck -auto-repair -u$user -p$pass -A -o
+$expath/mysqlcheck --auto-repair -u$user -p$pass -A -o
 # Let's do this
 echo "Creating Backups of each DataBase into $dir";
 for i in `echo "show databases" | $expath/mysql -u$user -p$pass | grep -v Database`;
