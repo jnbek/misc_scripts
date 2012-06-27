@@ -9,7 +9,6 @@ adjkerntz -i
 cd /usr/src
 make -j4 buildworld
 make buildkernel $WANTCTF KERNCONF=$KERNCONF
-make installkernel KERNCONF=$KERNCONF
 echo "Build World, and Kernel Rebuilds Complete"
 echo "Boot into Single User Mode Now, and run $HOME/bin/installworld.sh to complete upgrade"
 # shutdown now
