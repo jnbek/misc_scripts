@@ -1,0 +1,13 @@
+#!/bin/sh
+RELENG="stable";
+VERSION="8";
+echo "Started: "
+date +%c;
+if [ -e "/usr/src/.svn" ]; then
+    cd /usr/src/;
+    /usr/local/bin/svn update;
+else
+    /usr/local/bin/svn checkout svn://svn.freebsd.org/base/$RELENG/$VERSION /usr/src;
+fi;
+echo "Finished: "
+date +%c;

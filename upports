@@ -1,0 +1,10 @@
+#!/bin/sh
+echo "Started:"
+date;
+PATH=$PATH:/usr/sbin
+/usr/sbin/portsnap cron
+if [-x "/usr/local/bin/ezjail-admin" ] then;
+    /usr/local/bin/ezjail-admin update -P
+fi;
+echo "Finished:"
+date;
