@@ -2,9 +2,18 @@
 echo "Started:"
 date;
 PATH=$PATH:/usr/sbin
-/usr/sbin/portsnap cron
-if [-x "/usr/local/bin/ezjail-admin" ]; then
+echo "Started: "
+date +%c;
+if [ -e "/usr/ports/.svn" ]; then
+    cd /usr/ports/;
+    /usr/local/bin/svn update;
+else
+    /usr/local/bin/svn checkout svn://svn.freebsd.org/ports/head /usr/ports;
+fi;
+#/usr/sbin/portsnap cron
+if [ -x "/usr/local/bin/ezjail-admin" ]; then
     /usr/local/bin/ezjail-admin update -P
 fi;
 echo "Finished:"
-date;
+
+date +%c;
