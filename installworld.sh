@@ -4,7 +4,7 @@
 KERNCONF='FILESERVER_8'
 cd /usr/src
 make installkernel KERNCONF=$KERNCONF
-make -j4 installworld
+make installworld
 cd /usr/src/usr.sbin/mergemaster
 ./mergemaster.sh -Ui
 fastboot
