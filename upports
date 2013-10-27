@@ -1,4 +1,6 @@
 #!/bin/sh
+#SVNHOST="svn.freebsd.org"
+SVNHOST="svn0.us-west.freebsd.org"
 echo "Started:"
 date;
 PATH=$PATH:/usr/sbin
@@ -8,7 +10,7 @@ if [ -e "/usr/ports/.svn" ]; then
     cd /usr/ports/;
     /usr/local/bin/svn update;
 else
-    /usr/local/bin/svn checkout svn://svn.freebsd.org/ports/head /usr/ports;
+    /usr/local/bin/svn checkout svn://$SVNHOST/ports/head /usr/ports;
 fi;
 #/usr/sbin/portsnap cron
 if [ -x "/usr/local/bin/ezjail-admin" ]; then
